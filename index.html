@@ -2,22 +2,185 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <meta
+        name="description"
+        content="Personal website of Nickolas Ellison, a mathematics and physics student at Harvard University."
+    >
+
     <title>Nickolas Ellison</title>
+
+    <style>
+        :root {
+            --text: #222222;
+            --secondary-text: #555555;
+            --accent: #a51c30;
+            --border: #dddddd;
+            --background: #ffffff;
+        }
+
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            margin: 0;
+            background: var(--background);
+            color: var(--text);
+            font-family: Georgia, "Times New Roman", serif;
+            line-height: 1.65;
+        }
+
+        .page {
+            width: min(900px, calc(100% - 48px));
+            margin: 0 auto;
+        }
+
+        header {
+            padding: 42px 0 22px;
+            border-bottom: 2px solid var(--accent);
+        }
+
+        header h1 {
+            margin: 0;
+            font-size: 2.3rem;
+            font-weight: 600;
+            letter-spacing: -0.02em;
+        }
+
+        header a {
+            color: var(--text);
+            text-decoration: none;
+        }
+
+        nav {
+            margin-top: 12px;
+        }
+
+        nav a {
+            color: var(--accent);
+            font-family: Arial, Helvetica, sans-serif;
+            font-size: 0.95rem;
+            font-weight: 600;
+            text-decoration: none;
+        }
+
+        nav a:hover {
+            text-decoration: underline;
+        }
+
+        main {
+            padding: 55px 0 70px;
+        }
+
+        .introduction {
+            display: grid;
+            grid-template-columns: 300px 1fr;
+            gap: 48px;
+            align-items: center;
+        }
+
+        .profile-photo {
+            display: block;
+            width: 100%;
+            height: auto;
+            border-radius: 4px;
+            box-shadow: 0 4px 16px rgba(0, 0, 0, 0.12);
+        }
+
+        .introduction h2 {
+            margin: 0 0 16px;
+            font-size: 1.8rem;
+            font-weight: 600;
+        }
+
+        .introduction p {
+            margin: 0;
+            color: var(--secondary-text);
+            font-size: 1.2rem;
+        }
+
+        footer {
+            padding: 22px 0 36px;
+            border-top: 1px solid var(--border);
+            color: var(--secondary-text);
+            font-family: Arial, Helvetica, sans-serif;
+            font-size: 0.85rem;
+        }
+
+        @media (max-width: 700px) {
+            .page {
+                width: min(100% - 32px, 500px);
+            }
+
+            header {
+                padding-top: 30px;
+            }
+
+            header h1 {
+                font-size: 2rem;
+            }
+
+            main {
+                padding-top: 36px;
+            }
+
+            .introduction {
+                grid-template-columns: 1fr;
+                gap: 28px;
+            }
+
+            .profile-photo {
+                width: min(100%, 300px);
+            }
+
+            .introduction p {
+                font-size: 1.1rem;
+            }
+        }
+    </style>
 </head>
 
 <body>
-    <h1>Nickolas Ellison</h1>
+    <div class="page">
+        <header>
+            <h1>
+                <a href="/">Nickolas Ellison</a>
+            </h1>
 
-    <p>
-        Mathematics and Physics student at Harvard University.
-    </p>
+            <nav aria-label="Primary navigation">
+                <a href="/" aria-current="page">Home</a>
+            </nav>
+        </header>
 
-    <h2>Website Under Development</h2>
+        <main>
+            <section class="introduction">
+                <img
+                    class="profile-photo"
+                    src="Nickolas-Ellison-Bamboo-Forest.jpg"
+                    alt="Nickolas Ellison standing outdoors in a bamboo forest"
+                >
 
-    <p>
-        This website will contain information about my research,
-        projects, teaching, and academic background.
-    </p>
+                <div>
+                    <h2>About Me</h2>
+
+                    <p>
+                        Senior at Harvard studying mathematics and physics,
+                        from Woodsboro, Texas. I enjoy doing course assisting,
+                        doing research, and hiking.
+                    </p>
+                </div>
+            </section>
+        </main>
+
+        <footer>
+            &copy; 2026 Nickolas Ellison
+        </footer>
+    </div>
 </body>
 </html>
