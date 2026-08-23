@@ -1,0 +1,357 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <meta
+        name="description"
+        content="Education and selected coursework of Nickolas Ellison."
+    >
+
+    <title>Education | Nickolas Ellison</title>
+
+    <style>
+        :root {
+            --text: #222222;
+            --secondary-text: #555555;
+            --accent: #a51c30;
+            --border: #dddddd;
+            --light-background: #f7f7f7;
+            --background: #ffffff;
+        }
+
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            margin: 0;
+            background: var(--background);
+            color: var(--text);
+            font-family: Georgia, "Times New Roman", serif;
+            line-height: 1.65;
+        }
+
+        .page {
+            width: min(900px, calc(100% - 48px));
+            margin: 0 auto;
+        }
+
+        header {
+            padding: 42px 0 22px;
+            border-bottom: 2px solid var(--accent);
+        }
+
+        header h1 {
+            margin: 0;
+            font-size: 2.3rem;
+            font-weight: 600;
+            letter-spacing: -0.02em;
+        }
+
+        header h1 a {
+            color: var(--text);
+            text-decoration: none;
+        }
+
+        nav {
+            margin-top: 12px;
+        }
+
+        nav a {
+            color: var(--accent);
+            font-family: Arial, Helvetica, sans-serif;
+            font-size: 0.95rem;
+            font-weight: 600;
+            text-decoration: none;
+        }
+
+        nav a + a {
+            margin-left: 22px;
+        }
+
+        nav a:hover {
+            text-decoration: underline;
+        }
+
+        nav a[aria-current="page"] {
+            text-decoration: underline;
+            text-underline-offset: 4px;
+        }
+
+        main {
+            padding: 50px 0 70px;
+        }
+
+        main h2 {
+            margin: 0 0 35px;
+            font-size: 2rem;
+        }
+
+        main h2:not(:first-child) {
+            margin-top: 55px;
+        }
+
+        .education-entry {
+            padding-bottom: 32px;
+            margin-bottom: 32px;
+            border-bottom: 1px solid var(--border);
+        }
+
+        .education-entry:last-of-type {
+            margin-bottom: 0;
+        }
+
+        .education-heading {
+            display: flex;
+            justify-content: space-between;
+            gap: 20px;
+            align-items: baseline;
+        }
+
+        .education-heading h3 {
+            margin: 0;
+            font-size: 1.4rem;
+        }
+
+        .location {
+            margin: 0;
+            color: var(--secondary-text);
+            font-family: Arial, Helvetica, sans-serif;
+            font-size: 0.9rem;
+            white-space: nowrap;
+        }
+
+        .degree {
+            margin: 12px 0 0;
+            font-weight: 600;
+        }
+
+        .degree-detail {
+            margin: 5px 0 0;
+            color: var(--secondary-text);
+        }
+
+        .course-introduction {
+            margin: -18px 0 25px;
+            color: var(--secondary-text);
+        }
+
+        .course-grid {
+            display: grid;
+            grid-template-columns: repeat(2, minmax(0, 1fr));
+            gap: 20px;
+        }
+
+        .course-card {
+            padding: 23px;
+            background: var(--light-background);
+            border: 1px solid var(--border);
+            border-top: 3px solid var(--accent);
+            border-radius: 3px;
+        }
+
+        .course-card h3 {
+            margin: 0 0 8px;
+            font-size: 1.2rem;
+        }
+
+        .course-number {
+            margin: 0 0 10px;
+            color: var(--accent);
+            font-family: Arial, Helvetica, sans-serif;
+            font-size: 0.9rem;
+            font-weight: 700;
+        }
+
+        .course-institution {
+            margin: 0;
+            color: var(--secondary-text);
+            font-family: Arial, Helvetica, sans-serif;
+            font-size: 0.9rem;
+        }
+
+        .course-list {
+            margin: 13px 0 0;
+            padding-left: 20px;
+            color: var(--secondary-text);
+        }
+
+        .course-list li + li {
+            margin-top: 6px;
+        }
+
+        footer {
+            padding: 22px 0 36px;
+            border-top: 1px solid var(--border);
+            color: var(--secondary-text);
+            font-family: Arial, Helvetica, sans-serif;
+            font-size: 0.85rem;
+        }
+
+        @media (max-width: 700px) {
+            .page {
+                width: min(100% - 32px, 500px);
+            }
+
+            header {
+                padding-top: 30px;
+            }
+
+            header h1 {
+                font-size: 2rem;
+            }
+
+            main {
+                padding-top: 36px;
+            }
+
+            .education-heading {
+                display: block;
+            }
+
+            .location {
+                margin-top: 4px;
+                white-space: normal;
+            }
+
+            .course-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="page">
+        <header>
+            <h1>
+                <a href="/">Nickolas Ellison</a>
+            </h1>
+
+            <nav aria-label="Primary navigation">
+                <a href="/">Home</a>
+
+                <a href="education.html" aria-current="page">
+                    Education
+                </a>
+
+                <a href="teaching.html">
+                    Teaching
+                </a>
+            </nav>
+        </header>
+
+        <main>
+            <h2>Education</h2>
+
+            <section class="education-entry">
+                <div class="education-heading">
+                    <h3>Harvard University</h3>
+
+                    <p class="location">
+                        Cambridge, Massachusetts
+                    </p>
+                </div>
+
+                <p class="degree">
+                    Candidate for A.B., Joint Concentration in
+                    Mathematics and Physics
+                </p>
+
+                <p class="degree-detail">
+                    Concurrent candidate for A.M. in Physics
+                    · Expected May 2027
+                </p>
+            </section>
+
+            <section class="education-entry">
+                <div class="education-heading">
+                    <h3>Coastal Bend College</h3>
+
+                    <p class="location">
+                        Beeville, Texas
+                    </p>
+                </div>
+
+                <p class="degree">
+                    Associate Degree in General Sciences
+                </p>
+
+                <p class="degree-detail">
+                    Graduated May 2023 · 4.0 GPA · Highest Honors
+                </p>
+            </section>
+
+            <h2>Course Highlights</h2>
+
+            <p class="course-introduction">
+                Some of my favorite courses so far include:
+            </p>
+
+            <div class="course-grid">
+                <article class="course-card">
+                    <p class="course-number">
+                        Math 55A and Math 55B
+                    </p>
+
+                    <h3>
+                        Studies in Algebra, Analysis, and Geometry
+                    </h3>
+
+                    <p class="course-institution">
+                        Harvard University · 2023–2024
+                    </p>
+
+                    <ul class="course-list">
+                        <li>
+                            Studies in Algebra and Group Theory
+                        </li>
+
+                        <li>
+                            Studies in Real and Complex Analysis
+                        </li>
+                    </ul>
+                </article>
+
+                <article class="course-card">
+                    <p class="course-number">
+                        MIT 8.323 and MIT 8.324
+                    </p>
+
+                    <h3>
+                        Relativistic Quantum Field Theory I and II
+                    </h3>
+
+                    <p class="course-institution">
+                        Massachusetts Institute of Technology · 2025
+                    </p>
+                </article>
+
+                <article class="course-card">
+                    <p class="course-number">
+                        Math 213A
+                    </p>
+
+                    <h3>
+                        Advanced Complex Analysis
+                    </h3>
+
+                    <p class="course-institution">
+                        Harvard University · Fall 2025
+                    </p>
+                </article>
+            </div>
+        </main>
+
+        <footer>
+            &copy; 2026 Nickolas Ellison
+        </footer>
+    </div>
+</body>
+</html>
