@@ -1,0 +1,268 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <meta
+        name="description"
+        content="Teaching experience of Nickolas Ellison."
+    >
+
+    <title>Teaching | Nickolas Ellison</title>
+
+    <style>
+        :root {
+            --text: #222222;
+            --secondary-text: #555555;
+            --accent: #a51c30;
+            --border: #dddddd;
+            --background: #ffffff;
+        }
+
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            margin: 0;
+            background: var(--background);
+            color: var(--text);
+            font-family: Georgia, "Times New Roman", serif;
+            line-height: 1.65;
+        }
+
+        .page {
+            width: min(900px, calc(100% - 48px));
+            margin: 0 auto;
+        }
+
+        header {
+            padding: 42px 0 22px;
+            border-bottom: 2px solid var(--accent);
+        }
+
+        header h1 {
+            margin: 0;
+            font-size: 2.3rem;
+            font-weight: 600;
+            letter-spacing: -0.02em;
+        }
+
+        header h1 a {
+            color: var(--text);
+            text-decoration: none;
+        }
+
+        nav {
+            margin-top: 12px;
+        }
+
+        nav a {
+            color: var(--accent);
+            font-family: Arial, Helvetica, sans-serif;
+            font-size: 0.95rem;
+            font-weight: 600;
+            text-decoration: none;
+        }
+
+        nav a + a {
+            margin-left: 22px;
+        }
+
+        nav a:hover {
+            text-decoration: underline;
+        }
+
+        nav a[aria-current="page"] {
+            text-decoration: underline;
+            text-underline-offset: 4px;
+        }
+
+        main {
+            padding: 50px 0 70px;
+        }
+
+        main h2 {
+            margin: 0 0 35px;
+            font-size: 2rem;
+        }
+
+        .teaching-entry {
+            padding: 0 0 30px;
+            margin-bottom: 30px;
+            border-bottom: 1px solid var(--border);
+        }
+
+        .teaching-entry:last-child {
+            margin-bottom: 0;
+            border-bottom: 0;
+        }
+
+        .teaching-entry h3 {
+            margin: 0 0 5px;
+            font-size: 1.3rem;
+        }
+
+        .institution {
+            margin: 0 0 2px;
+            font-weight: 600;
+        }
+
+        .position {
+            margin: 0 0 12px;
+            color: var(--secondary-text);
+            font-family: Arial, Helvetica, sans-serif;
+            font-size: 0.95rem;
+        }
+
+        .description {
+            margin: 0;
+            color: var(--secondary-text);
+        }
+
+        footer {
+            padding: 22px 0 36px;
+            border-top: 1px solid var(--border);
+            color: var(--secondary-text);
+            font-family: Arial, Helvetica, sans-serif;
+            font-size: 0.85rem;
+        }
+
+        @media (max-width: 700px) {
+            .page {
+                width: min(100% - 32px, 500px);
+            }
+
+            header {
+                padding-top: 30px;
+            }
+
+            header h1 {
+                font-size: 2rem;
+            }
+
+            main {
+                padding-top: 36px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="page">
+        <header>
+            <h1>
+                <a href="/">Nickolas Ellison</a>
+            </h1>
+
+            <nav aria-label="Primary navigation">
+                <a href="/">Home</a>
+
+                <a href="teaching.html" aria-current="page">
+                    Teaching
+                </a>
+            </nav>
+        </header>
+
+        <main>
+            <h2>Teaching</h2>
+
+            <article class="teaching-entry">
+                <h3>Math 113: Complex Analysis</h3>
+
+                <p class="institution">
+                    Harvard University
+                </p>
+
+                <p class="position">
+                    Course Assistant · Spring 2026
+                </p>
+
+                <p class="description">
+                    Hosted office hours and review sections, answered
+                    student questions, and graded homework.
+                </p>
+            </article>
+
+            <article class="teaching-entry">
+                <h3>Math 122: Algebra I — Group Theory</h3>
+
+                <p class="institution">
+                    Harvard University
+                </p>
+
+                <p class="position">
+                    Course Assistant · Fall 2025
+                </p>
+
+                <p class="description">
+                    Hosted office hours and review sections, answered
+                    questions, graded homework, wrote solutions, and
+                    prepared lecture notes in LaTeX.
+                </p>
+            </article>
+
+            <article class="teaching-entry">
+                <h3>Physics 143A: Quantum Mechanics I</h3>
+
+                <p class="institution">
+                    Harvard University
+                </p>
+
+                <p class="position">
+                    Course Assistant · Spring 2025
+                </p>
+
+                <p class="description">
+                    Hosted office hours, answered student questions,
+                    and graded homework.
+                </p>
+            </article>
+
+            <article class="teaching-entry">
+                <h3>Math 136: Differential Geometry</h3>
+
+                <p class="institution">
+                    Harvard University
+                </p>
+
+                <p class="position">
+                    Course Assistant · Fall 2024
+                </p>
+
+                <p class="description">
+                    Hosted office hours, answered student questions,
+                    and graded homework.
+                </p>
+            </article>
+
+            <article class="teaching-entry">
+                <h3>High School Mathematics Camp</h3>
+
+                <p class="institution">
+                    Sabine High School
+                </p>
+
+                <p class="position">
+                    Mathematics Teacher · Summers 2023 and 2024
+                </p>
+
+                <p class="description">
+                    Taught mathematics to high school students,
+                    organized instructional material, and led class
+                    sections.
+                </p>
+            </article>
+        </main>
+
+        <footer>
+            &copy; 2026 Nickolas Ellison
+        </footer>
+    </div>
+</body>
+</html>
