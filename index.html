@@ -69,9 +69,11 @@
             font-weight: 600;
             text-decoration: none;
         }
+
         nav a + a {
             margin-left: 22px;
         }
+
         nav a:hover {
             text-decoration: underline;
         }
@@ -105,6 +107,51 @@
             margin: 0;
             color: var(--secondary-text);
             font-size: 1.2rem;
+        }
+
+        .contact {
+            margin-top: 60px;
+            padding-top: 35px;
+            border-top: 1px solid var(--border);
+        }
+
+        .contact h2 {
+            margin: 0 0 22px;
+            font-size: 1.8rem;
+            font-weight: 600;
+        }
+
+        .contact-list {
+            margin: 0;
+        }
+
+        .contact-row {
+            display: grid;
+            grid-template-columns: 100px minmax(0, 1fr);
+            gap: 20px;
+            padding: 12px 0;
+            border-bottom: 1px solid var(--border);
+        }
+
+        .contact-row:last-child {
+            border-bottom: 0;
+        }
+
+        .contact-row dt {
+            font-family: Arial, Helvetica, sans-serif;
+            font-size: 0.95rem;
+            font-weight: 700;
+        }
+
+        .contact-row dd {
+            margin: 0;
+        }
+
+        .contact-row a {
+            color: var(--accent);
+            overflow-wrap: anywhere;
+            text-decoration-thickness: 1px;
+            text-underline-offset: 3px;
         }
 
         footer {
@@ -144,6 +191,11 @@
             .introduction p {
                 font-size: 1.1rem;
             }
+
+            .contact-row {
+                grid-template-columns: 1fr;
+                gap: 2px;
+            }
         }
     </style>
 </head>
@@ -180,6 +232,56 @@
                         doing research, and hiking.
                     </p>
                 </div>
+            </section>
+
+            <section class="contact">
+                <h2>Contact</h2>
+
+                <dl class="contact-list">
+                    <div class="contact-row">
+                        <dt>Harvard</dt>
+
+                        <dd>
+                            <a href="mailto:nwellison@college.harvard.edu">
+                                nwellison@college.harvard.edu
+                            </a>
+                        </dd>
+                    </div>
+
+                    <div class="contact-row">
+                        <dt>MIT</dt>
+
+                        <dd>
+                            <a href="mailto:nickelli@mit.edu">
+                                nickelli@mit.edu
+                            </a>
+                        </dd>
+                    </div>
+
+                    <div class="contact-row">
+                        <dt>Personal</dt>
+
+                        <dd>
+                            <a href="mailto:nickolas.wayne.ellison@gmail.com">
+                                nickolas.wayne.ellison@gmail.com
+                            </a>
+                        </dd>
+                    </div>
+
+                    <div class="contact-row">
+                        <dt>LinkedIn</dt>
+
+                        <dd>
+                            <a
+                                href="https://www.linkedin.com/in/nickolas-ellison-9292412b7/"
+                                target="_blank"
+                                rel="noopener noreferrer"
+                            >
+                                Nickolas Ellison on LinkedIn
+                            </a>
+                        </dd>
+                    </div>
+                </dl>
             </section>
         </main>
 
