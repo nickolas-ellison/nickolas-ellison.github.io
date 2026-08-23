@@ -1,0 +1,530 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <meta
+        name="description"
+        content="Research experience of Nickolas Ellison."
+    >
+
+    <title>Research | Nickolas Ellison</title>
+
+    <style>
+        :root {
+            --text: #222222;
+            --secondary-text: #555555;
+            --accent: #a51c30;
+            --border: #dddddd;
+            --light-background: #f7f7f7;
+            --background: #ffffff;
+        }
+
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            margin: 0;
+            background: var(--background);
+            color: var(--text);
+            font-family: Georgia, "Times New Roman", serif;
+            line-height: 1.65;
+        }
+
+        .page {
+            width: min(900px, calc(100% - 48px));
+            margin: 0 auto;
+        }
+
+        header {
+            padding: 42px 0 22px;
+            border-bottom: 2px solid var(--accent);
+        }
+
+        header h1 {
+            margin: 0;
+            font-size: 2.3rem;
+            font-weight: 600;
+            letter-spacing: -0.02em;
+        }
+
+        header h1 a {
+            color: var(--text);
+            text-decoration: none;
+        }
+
+        nav {
+            margin-top: 12px;
+        }
+
+        nav a {
+            color: var(--accent);
+            font-family: Arial, Helvetica, sans-serif;
+            font-size: 0.95rem;
+            font-weight: 600;
+            text-decoration: none;
+        }
+
+        nav a + a {
+            margin-left: 22px;
+        }
+
+        nav a:hover {
+            text-decoration: underline;
+        }
+
+        nav a[aria-current="page"] {
+            text-decoration: underline;
+            text-underline-offset: 4px;
+        }
+
+        main {
+            padding: 50px 0 70px;
+        }
+
+        main > h2 {
+            margin: 0 0 15px;
+            font-size: 2rem;
+        }
+
+        .page-introduction {
+            max-width: 720px;
+            margin: 0 0 42px;
+            color: var(--secondary-text);
+            font-size: 1.05rem;
+        }
+
+        .research-entry {
+            padding-bottom: 44px;
+            margin-bottom: 44px;
+            border-bottom: 1px solid var(--border);
+        }
+
+        .research-entry:last-child {
+            padding-bottom: 0;
+            margin-bottom: 0;
+            border-bottom: 0;
+        }
+
+        .entry-heading {
+            display: flex;
+            justify-content: space-between;
+            gap: 24px;
+            align-items: baseline;
+        }
+
+        .entry-heading h3 {
+            margin: 0;
+            font-size: 1.45rem;
+        }
+
+        .entry-heading h3 a {
+            color: var(--text);
+            text-decoration-color: var(--accent);
+            text-decoration-thickness: 1px;
+            text-underline-offset: 4px;
+        }
+
+        .entry-heading h3 a:hover {
+            color: var(--accent);
+        }
+
+        .date {
+            margin: 0;
+            color: var(--secondary-text);
+            font-family: Arial, Helvetica, sans-serif;
+            font-size: 0.9rem;
+            white-space: nowrap;
+        }
+
+        .location {
+            margin: 5px 0 16px;
+            color: var(--secondary-text);
+            font-family: Arial, Helvetica, sans-serif;
+            font-size: 0.95rem;
+        }
+
+        .people {
+            margin: 0 0 16px;
+        }
+
+        .people strong {
+            font-weight: 600;
+        }
+
+        .people a,
+        .program a,
+        .project-description a {
+            color: var(--accent);
+            text-decoration-thickness: 1px;
+            text-underline-offset: 3px;
+        }
+
+        .program {
+            margin: 0 0 20px;
+            padding: 15px 18px;
+            background: var(--light-background);
+            border-left: 3px solid var(--accent);
+            color: var(--secondary-text);
+        }
+
+        .project-description {
+            margin: 0;
+            color: var(--secondary-text);
+        }
+
+        .subproject {
+            margin-top: 26px;
+            padding: 23px;
+            background: var(--light-background);
+            border: 1px solid var(--border);
+            border-radius: 3px;
+        }
+
+        .subproject h4 {
+            margin: 0 0 5px;
+            font-size: 1.15rem;
+        }
+
+        .subproject-date {
+            margin: 0 0 13px;
+            color: var(--secondary-text);
+            font-family: Arial, Helvetica, sans-serif;
+            font-size: 0.9rem;
+        }
+
+        .subproject p:last-child {
+            margin-bottom: 0;
+        }
+
+        .lab-link {
+            display: inline-block;
+            margin-top: 18px;
+            color: var(--accent);
+            font-family: Arial, Helvetica, sans-serif;
+            font-size: 0.9rem;
+            font-weight: 600;
+            text-decoration: none;
+        }
+
+        .lab-link:hover {
+            text-decoration: underline;
+        }
+
+        footer {
+            padding: 22px 0 36px;
+            border-top: 1px solid var(--border);
+            color: var(--secondary-text);
+            font-family: Arial, Helvetica, sans-serif;
+            font-size: 0.85rem;
+        }
+
+        @media (max-width: 700px) {
+            .page {
+                width: min(100% - 32px, 500px);
+            }
+
+            header {
+                padding-top: 30px;
+            }
+
+            header h1 {
+                font-size: 2rem;
+            }
+
+            nav a + a {
+                margin-left: 15px;
+            }
+
+            main {
+                padding-top: 36px;
+            }
+
+            .entry-heading {
+                display: block;
+            }
+
+            .date {
+                margin-top: 5px;
+                white-space: normal;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="page">
+        <header>
+            <h1>
+                <a href="/">Nickolas Ellison</a>
+            </h1>
+
+            <nav aria-label="Primary navigation">
+                <a href="/">Home</a>
+                <a href="education.html">Education</a>
+
+                <a href="research.html" aria-current="page">
+                    Research
+                </a>
+
+                <a href="teaching.html">Teaching</a>
+            </nav>
+        </header>
+
+        <main>
+            <h2>Research</h2>
+
+            <p class="page-introduction">
+                My research experience has included experimental quantum
+                physics, theoretical neuroscience, and computational biology.
+            </p>
+
+            <section class="research-entry">
+                <div class="entry-heading">
+                    <h3>
+                        <a
+                            href="https://yao.physics.harvard.edu/"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                        >
+                            Norman Yao Group, Harvard University
+                        </a>
+                    </h3>
+
+                    <p class="date">
+                        September 2025–August 2026
+                    </p>
+                </div>
+
+                <p class="location">
+                    Cambridge, Massachusetts
+                </p>
+
+                <p class="people">
+                    <strong>Faculty:</strong>
+
+                    <a
+                        href="https://yao.physics.harvard.edu/directory/norman-yao/"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                    >
+                        Professor Norman Yao
+                    </a>
+                </p>
+
+                <div class="subproject">
+                    <h4>High-Pressure Quantum Sensing</h4>
+
+                    <p class="subproject-date">
+                        Academic Year 2025–2026
+                    </p>
+
+                    <p class="project-description">
+                        I worked on an experimental quantum-sensing
+                        platform using nitrogen-vacancy centers in
+                        diamond anvil cells. My work focused on
+                        synchronizing a wide-field camera system with
+                        laser pulse sequences used to measure materials
+                        under high pressure.
+                    </p>
+
+                    <a
+                        class="lab-link"
+                        href="https://yao.physics.harvard.edu/research/high-pressure-quantum-sensing/"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                    >
+                        Read about the research project →
+                    </a>
+                </div>
+
+                <div class="subproject">
+                    <h4>
+                        Laser Stabilization for Ultracold-Atom
+                        Experiments
+                    </h4>
+
+                    <p class="subproject-date">
+                        Summer 2026
+                    </p>
+
+                    <p class="program">
+                        Conducted through Harvard’s
+
+                        <a
+                            href="https://uraf.harvard.edu/prise"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                        >
+                            Program for Research in Science and
+                            Engineering (PRISE)
+                        </a>.
+                    </p>
+
+                    <p class="project-description">
+                        I switched to an atomic, molecular, and
+                        optical physics subgroup working with
+                        ultracold-atom experiments. I worked on laser
+                        frequency stabilization by developing a
+                        scanning transfer-cavity control system and
+                        implementing data acquisition and feedback for
+                        stable laser operation.
+                    </p>
+                </div>
+
+                <a
+                    class="lab-link"
+                    href="https://yao.physics.harvard.edu/"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                >
+                    Visit the Yao Group website →
+                </a>
+            </section>
+
+            <section class="research-entry">
+                <div class="entry-heading">
+                    <h3>
+                        <a
+                            href="https://cbs.riken.jp/en/"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                        >
+                            RIKEN Center for Brain Science
+                        </a>
+                    </h3>
+
+                    <p class="date">
+                        June–August 2025
+                    </p>
+                </div>
+
+                <p class="location">
+                    Wako, Saitama, Japan
+                </p>
+
+                <p class="people">
+                    <strong>Advisors:</strong>
+
+                    <a
+                        href="https://cbs.riken.jp/en/faculty/t.isomura/"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                    >
+                        Dr. Takuya Isomura
+                    </a>
+
+                    and Dr. Richard Servajean
+                </p>
+
+                <p class="program">
+                    Participated in the
+
+                    <a
+                        href="https://cbs.riken.jp/en/summer/"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                    >
+                        RIKEN CBS Summer Program
+                    </a>
+
+                    through Harvard’s
+
+                    <a
+                        href="https://rijs.fas.harvard.edu/undergraduate/science"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                    >
+                        RIJS Japan Summer Science Undergraduate
+                        Research Program (JSSURP)
+                    </a>.
+                </p>
+
+                <p class="project-description">
+                    I conducted theoretical-neuroscience research on
+                    the Free Energy Principle. I extended the standard
+                    mathematical framework of internal and external
+                    states, separated by sensory and active states, to
+                    hierarchical models. I developed the corresponding
+                    mathematical formalism, conducted computational
+                    simulations, and presented the results at the end
+                    of the internship.
+                </p>
+
+                <a
+                    class="lab-link"
+                    href="https://cbs.riken.jp/en/faculty/t.isomura/"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                >
+                    Visit the Brain Intelligence Theory Unit →
+                </a>
+            </section>
+
+            <section class="research-entry">
+                <div class="entry-heading">
+                    <h3>
+                        <a
+                            href="https://optics.mit.edu/"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                        >
+                            MIT 3D Optical Systems Group
+                        </a>
+                    </h3>
+
+                    <p class="date">
+                        February–May 2025
+                    </p>
+                </div>
+
+                <p class="location">
+                    Massachusetts Institute of Technology,
+                    Cambridge, Massachusetts
+                </p>
+
+                <p class="people">
+                    <strong>Advisor:</strong>
+
+                    <a
+                        href="https://optics.mit.edu/team/"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                    >
+                        Professor George Barbastathis
+                    </a>
+                </p>
+
+                <p class="project-description">
+                    I studied a computational model of a solution
+                    containing two types of microparticles. I extended
+                    an initial model to incorporate more complex and
+                    realistic particle dynamics, generated simulated
+                    speckle images, calculated and analyzed image
+                    autocorrelations, and fitted several models to the
+                    resulting autocorrelation data.
+                </p>
+
+                <a
+                    class="lab-link"
+                    href="https://optics.mit.edu/"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                >
+                    Visit the 3D Optical Systems Group website →
+                </a>
+            </section>
+        </main>
+
+        <footer>
+            &copy; 2026 Nickolas Ellison
+        </footer>
+    </div>
+</body>
+</html>
