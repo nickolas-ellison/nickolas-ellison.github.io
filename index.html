@@ -20,6 +20,7 @@
             --text: #222222;
             --secondary-text: #555555;
             --accent: #a51c30;
+            --accent-hover: #7f1525;
             --border: #dddddd;
             --background: #ffffff;
         }
@@ -107,6 +108,23 @@
             margin: 0;
             color: var(--secondary-text);
             font-size: 1.2rem;
+        }
+
+        .cv-link {
+            display: inline-block;
+            margin-top: 20px;
+            padding: 9px 16px;
+            background: var(--accent);
+            color: #ffffff;
+            border-radius: 3px;
+            font-family: Arial, Helvetica, sans-serif;
+            font-size: 0.95rem;
+            font-weight: 600;
+            text-decoration: none;
+        }
+
+        .cv-link:hover {
+            background: var(--accent-hover);
         }
 
         .contact {
@@ -231,6 +249,15 @@
                         from Woodsboro, Texas. I enjoy course assisting,
                         doing research, and hiking.
                     </p>
+
+                    <a
+                        class="cv-link"
+                        href="Nickolas Ellison_CV.pdf"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                    >
+                        View CV
+                    </a>
                 </div>
             </section>
 
@@ -244,16 +271,6 @@
                         <dd>
                             <a href="mailto:nwellison@college.harvard.edu">
                                 nwellison@college.harvard.edu
-                            </a>
-                        </dd>
-                    </div>
-
-                    <div class="contact-row">
-                        <dt>MIT</dt>
-
-                        <dd>
-                            <a href="mailto:nickelli@mit.edu">
-                                nickelli@mit.edu
                             </a>
                         </dd>
                     </div>
