@@ -233,6 +233,16 @@
             text-align: center;
         }
 
+        .data-gallery {
+            align-items: start;
+        }
+
+        .data-gallery .research-photo img {
+            height: auto;
+            object-fit: contain;
+            background: #ffffff;
+        }
+
         .lab-link {
             display: inline-block;
             margin-top: 18px;
@@ -289,7 +299,8 @@
                 grid-template-columns: 1fr;
             }
 
-            .research-photo img {
+            .research-photo img,
+            .data-gallery .research-photo img {
                 height: auto;
             }
         }
@@ -576,7 +587,7 @@
                     resulting autocorrelation data.
                 </p>
 
-                <div class="research-gallery">
+                <div class="research-gallery data-gallery">
                     <figure class="research-photo">
                         <img
                             src="Particles%20and%20Size%20Distribution.png"
