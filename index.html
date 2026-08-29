@@ -90,12 +90,26 @@
             align-items: center;
         }
 
+        .profile-figure {
+            width: 100%;
+            margin: 0;
+        }
+
         .profile-photo {
             display: block;
             width: 100%;
             height: auto;
             border-radius: 4px;
             box-shadow: 0 4px 16px rgba(0, 0, 0, 0.12);
+        }
+
+        .photo-caption {
+            margin-top: 8px;
+            color: var(--secondary-text);
+            font-family: Arial, Helvetica, sans-serif;
+            font-size: 0.85rem;
+            line-height: 1.4;
+            text-align: center;
         }
 
         .introduction h2 {
@@ -125,6 +139,19 @@
 
         .cv-link:hover {
             background: var(--accent-hover);
+        }
+
+        .landscape-figure {
+            width: 100%;
+            margin: 60px 0 0;
+        }
+
+        .landscape-photo {
+            display: block;
+            width: 100%;
+            height: auto;
+            border-radius: 4px;
+            box-shadow: 0 4px 16px rgba(0, 0, 0, 0.12);
         }
 
         .contact {
@@ -202,12 +229,20 @@
                 gap: 28px;
             }
 
-            .profile-photo {
+            .profile-figure {
                 width: min(100%, 300px);
             }
 
             .introduction p {
                 font-size: 1.1rem;
+            }
+
+            .landscape-figure {
+                margin-top: 45px;
+            }
+
+            .contact {
+                margin-top: 45px;
             }
 
             .contact-row {
@@ -235,11 +270,17 @@
 
         <main>
             <section class="introduction">
-                <img
-                    class="profile-photo"
-                    src="Nickolas-Ellison-Bamboo-Forest.jpg"
-                    alt="Nickolas Ellison standing outdoors in a bamboo forest"
-                >
+                <figure class="profile-figure">
+                    <img
+                        class="profile-photo"
+                        src="Nickolas-Ellison-Bamboo-Forest.jpg"
+                        alt="Nickolas Ellison in the Arashiyama Bamboo Forest"
+                    >
+
+                    <figcaption class="photo-caption">
+                        Arashiyama Bamboo Forest (July 2025)
+                    </figcaption>
+                </figure>
 
                 <div>
                     <h2>About Me</h2>
@@ -247,8 +288,11 @@
                     <p>
                         I am a senior at Harvard studying mathematics and physics,
                         from Woodsboro, Texas and I enjoy course assisting,
-                        doing research, and hiking. Much of my coursework and experiences have been in more theoretical and computational fields, 
-                        but lately my interests have been shifting to more experimental and applied physics, particularly in the biology sector.
+                        doing research, and hiking. Much of my coursework and
+                        experiences have been in more theoretical and computational
+                        fields, but lately my interests have been shifting to more
+                        experimental and applied physics, particularly in the biology
+                        sector.
                     </p>
 
                     <a
@@ -261,6 +305,18 @@
                     </a>
                 </div>
             </section>
+
+            <figure class="landscape-figure">
+                <img
+                    class="landscape-photo"
+                    src="Mt.%20Fuji%20View.jpg"
+                    alt="View from Mount Fuji above the clouds and surrounding landscape"
+                >
+
+                <figcaption class="photo-caption">
+                    Mt. Fuji View (August 2025)
+                </figcaption>
+            </figure>
 
             <section class="contact">
                 <h2>Contact</h2>
