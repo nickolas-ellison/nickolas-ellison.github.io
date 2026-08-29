@@ -38,7 +38,7 @@
         }
 
         .page {
-            width: min(900px, calc(100% - 48px));
+            width: min(1000px, calc(100% - 48px));
             margin: 0 auto;
         }
 
@@ -85,17 +85,19 @@
 
         .introduction {
             display: grid;
-            grid-template-columns: 300px 1fr;
-            gap: 48px;
+            grid-template-columns: 240px minmax(300px, 1fr) 240px;
+            gap: 34px;
             align-items: center;
         }
 
-        .profile-figure {
+        .profile-figure,
+        .landscape-figure {
             width: 100%;
             margin: 0;
         }
 
-        .profile-photo {
+        .profile-photo,
+        .landscape-photo {
             display: block;
             width: 100%;
             height: auto;
@@ -103,25 +105,34 @@
             box-shadow: 0 4px 16px rgba(0, 0, 0, 0.12);
         }
 
+        .landscape-photo {
+            aspect-ratio: 3 / 2;
+            object-fit: cover;
+        }
+
         .photo-caption {
             margin-top: 8px;
             color: var(--secondary-text);
             font-family: Arial, Helvetica, sans-serif;
-            font-size: 0.85rem;
+            font-size: 0.82rem;
             line-height: 1.4;
             text-align: center;
         }
 
-        .introduction h2 {
+        .about {
+            min-width: 0;
+        }
+
+        .about h2 {
             margin: 0 0 16px;
             font-size: 1.8rem;
             font-weight: 600;
         }
 
-        .introduction p {
+        .about p {
             margin: 0;
             color: var(--secondary-text);
-            font-size: 1.2rem;
+            font-size: 1.1rem;
         }
 
         .cv-link {
@@ -139,19 +150,6 @@
 
         .cv-link:hover {
             background: var(--accent-hover);
-        }
-
-        .landscape-figure {
-            width: 100%;
-            margin: 60px 0 0;
-        }
-
-        .landscape-photo {
-            display: block;
-            width: 100%;
-            height: auto;
-            border-radius: 4px;
-            box-shadow: 0 4px 16px rgba(0, 0, 0, 0.12);
         }
 
         .contact {
@@ -207,6 +205,18 @@
             font-size: 0.85rem;
         }
 
+        @media (max-width: 900px) {
+            .introduction {
+                grid-template-columns: 240px minmax(0, 1fr);
+                align-items: start;
+            }
+
+            .landscape-figure {
+                grid-column: 2;
+                width: min(100%, 340px);
+            }
+        }
+
         @media (max-width: 700px) {
             .page {
                 width: min(100% - 32px, 500px);
@@ -226,19 +236,20 @@
 
             .introduction {
                 grid-template-columns: 1fr;
-                gap: 28px;
+                gap: 30px;
             }
 
             .profile-figure {
                 width: min(100%, 300px);
             }
 
-            .introduction p {
-                font-size: 1.1rem;
+            .landscape-figure {
+                grid-column: auto;
+                width: min(100%, 360px);
             }
 
-            .landscape-figure {
-                margin-top: 45px;
+            .about p {
+                font-size: 1.05rem;
             }
 
             .contact {
@@ -282,7 +293,7 @@
                     </figcaption>
                 </figure>
 
-                <div>
+                <div class="about">
                     <h2>About Me</h2>
 
                     <p>
@@ -304,19 +315,19 @@
                         View CV
                     </a>
                 </div>
+
+                <figure class="landscape-figure">
+                    <img
+                        class="landscape-photo"
+                        src="Mt.%20Fuji%20View.jpg"
+                        alt="View from Mount Fuji above the clouds and surrounding landscape"
+                    >
+
+                    <figcaption class="photo-caption">
+                        Mt. Fuji View (August 2025)
+                    </figcaption>
+                </figure>
             </section>
-
-            <figure class="landscape-figure">
-                <img
-                    class="landscape-photo"
-                    src="Mt.%20Fuji%20View.jpg"
-                    alt="View from Mount Fuji above the clouds and surrounding landscape"
-                >
-
-                <figcaption class="photo-caption">
-                    Mt. Fuji View (August 2025)
-                </figcaption>
-            </figure>
 
             <section class="contact">
                 <h2>Contact</h2>
