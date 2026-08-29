@@ -108,6 +108,17 @@
             font-size: 1.3rem;
         }
 
+        .teaching-entry h3 a {
+            color: var(--text);
+            text-decoration-color: var(--accent);
+            text-decoration-thickness: 1px;
+            text-underline-offset: 4px;
+        }
+
+        .teaching-entry h3 a:hover {
+            color: var(--accent);
+        }
+
         .institution {
             margin: 0 0 2px;
             font-weight: 600;
@@ -226,7 +237,15 @@
             </article>
 
             <article class="teaching-entry">
-                <h3>Math 136: Differential Geometry</h3>
+                <h3>
+                    <a
+                        href="https://people.math.harvard.edu/~knill/teaching/math136/"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                    >
+                        Math 136: Differential Geometry
+                    </a>
+                </h3>
 
                 <p class="institution">
                     Harvard University
