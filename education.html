@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -10,7 +10,7 @@
 
     <meta
         name="description"
-        content="Education, coursework, language study, and international experience of Nickolas Ellison."
+        content="Education and selected coursework of Nickolas Ellison."
     >
 
     <title>Education | Nickolas Ellison</title>
@@ -21,6 +21,7 @@
             --secondary-text: #555555;
             --accent: #a51c30;
             --border: #dddddd;
+            --light-background: #f7f7f7;
             --background: #ffffff;
         }
 
@@ -53,7 +54,7 @@
             letter-spacing: -0.02em;
         }
 
-        header a {
+        header h1 a {
             color: var(--text);
             text-decoration: none;
         }
@@ -78,93 +79,111 @@
             text-decoration: underline;
         }
 
-        main {
-            padding: 55px 0 70px;
+        nav a[aria-current="page"] {
+            text-decoration: underline;
+            text-underline-offset: 4px;
         }
 
-        .page-title {
-            margin: 0 0 38px;
+        main {
+            padding: 50px 0 70px;
+        }
+
+        main h2 {
+            margin: 0 0 35px;
             font-size: 2rem;
-            font-weight: 600;
+        }
+
+        main h2:not(:first-child) {
+            margin-top: 55px;
         }
 
         .education-entry {
-            padding: 0 0 35px;
-            margin-bottom: 35px;
+            padding-bottom: 32px;
+            margin-bottom: 32px;
             border-bottom: 1px solid var(--border);
         }
 
-        .education-entry h3 {
+        .education-entry:last-of-type {
+            margin-bottom: 0;
+        }
+
+        .education-heading {
+            display: flex;
+            justify-content: space-between;
+            gap: 20px;
+            align-items: baseline;
+        }
+
+        .education-heading h3 {
             margin: 0;
-            font-size: 1.45rem;
-            font-weight: 600;
+            font-size: 1.4rem;
         }
 
         .location {
-            margin: 2px 0 15px;
+            margin: 0;
             color: var(--secondary-text);
             font-family: Arial, Helvetica, sans-serif;
-            font-size: 0.95rem;
+            font-size: 0.9rem;
+            white-space: nowrap;
         }
 
         .degree {
-            margin: 0 0 6px;
-            font-size: 1.08rem;
-        }
-
-        .degree-details {
-            margin: 0;
-            color: var(--secondary-text);
-        }
-
-        .section {
-            margin-top: 48px;
-        }
-
-        .section h2 {
-            margin: 0 0 24px;
-            padding-bottom: 8px;
-            border-bottom: 1px solid var(--border);
-            font-size: 1.65rem;
+            margin: 12px 0 0;
             font-weight: 600;
         }
 
-        .course-group {
-            margin-bottom: 28px;
+        .degree-detail {
+            margin: 5px 0 0;
+            color: var(--secondary-text);
         }
 
-        .course-group:last-child {
-            margin-bottom: 0;
+        .course-introduction {
+            margin: -18px 0 25px;
+            color: var(--secondary-text);
         }
 
-        .course-group h3 {
+        .course-grid {
+            display: grid;
+            grid-template-columns: repeat(2, minmax(0, 1fr));
+            gap: 20px;
+        }
+
+        .course-card {
+            padding: 23px;
+            background: var(--light-background);
+            border: 1px solid var(--border);
+            border-top: 3px solid var(--accent);
+            border-radius: 3px;
+        }
+
+        .course-card h3 {
             margin: 0 0 8px;
-            font-size: 1.1rem;
-            font-weight: 600;
+            font-size: 1.2rem;
         }
 
-        .course-group p {
+        .course-number {
+            margin: 0 0 10px;
+            color: var(--accent);
+            font-family: Arial, Helvetica, sans-serif;
+            font-size: 0.9rem;
+            font-weight: 700;
+        }
+
+        .course-institution {
             margin: 0;
+            color: var(--secondary-text);
+            font-family: Arial, Helvetica, sans-serif;
+            font-size: 0.9rem;
+        }
+
+        .course-list {
+            margin: 13px 0 0;
+            padding-left: 20px;
             color: var(--secondary-text);
         }
 
-        .language-entry {
-            margin-bottom: 28px;
-        }
-
-        .language-entry:last-child {
-            margin-bottom: 0;
-        }
-
-        .language-entry h3 {
-            margin: 0 0 6px;
-            font-size: 1.15rem;
-            font-weight: 600;
-        }
-
-        .language-entry p {
-            margin: 0;
-            color: var(--secondary-text);
+        .course-list li + li {
+            margin-top: 6px;
         }
 
         footer {
@@ -188,16 +207,21 @@
                 font-size: 2rem;
             }
 
-            nav a + a {
-                margin-left: 14px;
-            }
-
             main {
                 padding-top: 36px;
             }
 
-            .page-title {
-                font-size: 1.8rem;
+            .education-heading {
+                display: block;
+            }
+
+            .location {
+                margin-top: 4px;
+                white-space: normal;
+            }
+
+            .course-grid {
+                grid-template-columns: 1fr;
             }
         }
     </style>
@@ -212,122 +236,116 @@
 
             <nav aria-label="Primary navigation">
                 <a href="/">Home</a>
-                <a href="education.html" aria-current="page">Education</a>
+                <a href="education.html" aria-current="page">
+                    Education
+                </a>
                 <a href="research.html">Research</a>
-                <a href="teaching.html">Teaching</a>
+                <a href="teaching.html">
+                    Teaching
+                </a>
             </nav>
         </header>
 
         <main>
-            <h2 class="page-title">Education</h2>
+            <h2>Education</h2>
 
             <section class="education-entry">
-                <h3>Harvard University</h3>
+                <div class="education-heading">
+                    <h3>Harvard University</h3>
 
-                <p class="location">
-                    Cambridge, Massachusetts
-                </p>
-
-                <p class="degree">
-                    Joint A.B. in Mathematics and Physics
-                </p>
+                    <p class="location">
+                        Cambridge, Massachusetts
+                    </p>
+                </div>
 
                 <p class="degree">
-                    Concurrent A.M. in Physics
+                    Candidate for A.B., Joint Concentration in
+                    Mathematics and Physics
                 </p>
 
-                <p class="degree-details">
-                    Expected May 2027
+                <p class="degree-detail">
+                    Concurrent candidate for A.M. in Physics
+                    · Expected May 2027
                 </p>
             </section>
 
             <section class="education-entry">
-                <h3>Coastal Bend College</h3>
+                <div class="education-heading">
+                    <h3>Coastal Bend College</h3>
 
-                <p class="location">
-                    Beeville, Texas
-                </p>
+                    <p class="location">
+                        Beeville, Texas
+                    </p>
+                </div>
 
                 <p class="degree">
                     Associate Degree in General Sciences
                 </p>
 
-                <p class="degree-details">
-                    Graduated May 2023 with highest honors
+                <p class="degree-detail">
+                    Graduated May 2023 · 4.0 GPA · Highest Honors
                 </p>
             </section>
 
-            <section class="section">
-                <h2>Selected Coursework</h2>
+            <h2>Course Highlights</h2>
 
-                <div class="course-group">
-                    <h3>Mathematics</h3>
+            <p class="course-introduction">
+                Some of my favorite courses so far include:
+            </p>
 
-                    <p>
-                        Studies in Algebra and Group Theory; Studies in Real and
-                        Complex Analysis; Number Theory; Probability I; Evolutionary
-                        Dynamics; Advanced Complex Analysis; Algebraic Topology;
-                        Lie Groups and Lie Algebras I; Mapping Class Groups and
-                        4-Manifolds
+            <div class="course-grid">
+                <article class="course-card">
+                    <p class="course-number">
+                        Math 55A and Math 55B
                     </p>
-                </div>
 
-                <div class="course-group">
-                    <h3>Physics</h3>
+                    <h3>
+                        Studies in Algebra, Analysis, and Geometry
+                    </h3>
 
-                    <p>
-                        Mechanics and Special Relativity; Quantum Mechanics I;
-                        Electrodynamics; Advanced Quantum Mechanics II; Relativistic
-                        Quantum Field Theory I and II; Introduction to Applied
-                        Nuclear Physics; Quantum Information Science; General
-                        Theory of Relativity
+                    <p class="course-institution">
+                        Harvard University · 2023–2024
                     </p>
-                </div>
 
-                <div class="course-group">
-                    <h3>Computation and Applied Mathematics</h3>
+                    <ul class="course-list">
+                        <li>
+                            Studies in Algebra and Group Theory
+                        </li>
 
-                    <p>
-                        Introduction to Computer Science; Machine Learning;
-                        Nonlinear Dynamics and Chaos
+                        <li>
+                            Studies in Real and Complex Analysis
+                        </li>
+                    </ul>
+                </article>
+
+                <article class="course-card">
+                    <p class="course-number">
+                        MIT 8.323 and MIT 8.324
                     </p>
-                </div>
-            </section>
 
-            <section class="section">
-                <h2>Language Study and International Experience</h2>
+                    <h3>
+                        Relativistic Quantum Field Theory I and II
+                    </h3>
 
-                <div class="language-entry">
-                    <h3>Mandarin Chinese</h3>
-
-                    <p>
-                        Completed CHNSE BA and CHNSE BB, Harvard’s year-long
-                        Elementary Modern Chinese sequence, earning an A in both
-                        courses. The sequence emphasized reading and writing in
-                        traditional Chinese characters.
+                    <p class="course-institution">
+                        Massachusetts Institute of Technology · 2025
                     </p>
-                </div>
+                </article>
 
-                <div class="language-entry">
-                    <h3>Japanese</h3>
-
-                    <p>
-                        Currently studying Japanese independently, with continued
-                        work in reading, writing, listening, and conversation.
+                <article class="course-card">
+                    <p class="course-number">
+                        Math 213A
                     </p>
-                </div>
 
-                <div class="language-entry">
-                    <h3>Study and Research in Japan</h3>
+                    <h3>
+                        Advanced Complex Analysis
+                    </h3>
 
-                    <p>
-                        Conducted research at the RIKEN Center for Brain Science
-                        in Wako, Japan, during summer 2025 through Harvard’s Japan
-                        Summer Science Undergraduate Research Program. Received a
-                        JSSURP grant supporting the experience.
+                    <p class="course-institution">
+                        Harvard University · Fall 2025
                     </p>
-                </div>
-            </section>
+                </article>
+            </div>
         </main>
 
         <footer>
@@ -335,4 +353,5 @@
         </footer>
     </div>
 </body>
+</html>
 </html>
