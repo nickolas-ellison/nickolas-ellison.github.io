@@ -38,7 +38,7 @@
         }
 
         .page {
-            width: min(1000px, calc(100% - 48px));
+            width: min(1100px, calc(100% - 48px));
             margin: 0 auto;
         }
 
@@ -85,8 +85,8 @@
 
         .introduction {
             display: grid;
-            grid-template-columns: 240px minmax(300px, 1fr) 240px;
-            gap: 34px;
+            grid-template-columns: 290px minmax(350px, 1fr) 290px;
+            gap: 36px;
             align-items: center;
         }
 
@@ -100,14 +100,19 @@
         .landscape-photo {
             display: block;
             width: 100%;
-            height: auto;
             border-radius: 4px;
             box-shadow: 0 4px 16px rgba(0, 0, 0, 0.12);
+            object-fit: cover;
+        }
+
+        .profile-photo {
+            height: 330px;
+            object-position: center;
         }
 
         .landscape-photo {
-            aspect-ratio: 3 / 2;
-            object-fit: cover;
+            height: 240px;
+            object-position: center;
         }
 
         .photo-caption {
@@ -205,15 +210,19 @@
             font-size: 0.85rem;
         }
 
-        @media (max-width: 900px) {
+        @media (max-width: 1100px) {
             .introduction {
-                grid-template-columns: 240px minmax(0, 1fr);
+                grid-template-columns: 290px minmax(0, 1fr);
                 align-items: start;
             }
 
             .landscape-figure {
                 grid-column: 2;
-                width: min(100%, 340px);
+                width: min(100%, 360px);
+            }
+
+            .landscape-photo {
+                height: 240px;
             }
         }
 
@@ -240,12 +249,20 @@
             }
 
             .profile-figure {
-                width: min(100%, 300px);
+                width: min(100%, 320px);
+            }
+
+            .profile-photo {
+                height: 360px;
             }
 
             .landscape-figure {
                 grid-column: auto;
-                width: min(100%, 360px);
+                width: min(100%, 380px);
+            }
+
+            .landscape-photo {
+                height: 260px;
             }
 
             .about p {
